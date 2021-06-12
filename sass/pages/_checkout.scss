@@ -1,0 +1,50 @@
+.page-checkout {
+    .toystore-product-list {
+        .table {
+            th:nth-child(1),
+            td:nth-child(1) {
+                width: 59%;
+                @include media-breakpoint-down(sm) {
+                    width: 40%;
+                }
+            }
+
+            th:nth-child(2),
+            td:nth-child(2) {
+                width: 13%;
+            }
+
+            th:nth-child(3),
+            td:nth-child(3) {
+                width: 10%;
+                padding-right: 5%;
+            }
+
+            th:nth-child(4),
+            td:nth-child(4) {
+                width: 13%;
+            }
+        }
+
+        .table-body {
+            .summary {
+                padding: 8px 12px 0;
+
+                .table {
+                    width: auto;
+
+                    td {
+                        width: auto;
+                        padding: 4px 0;
+                        color: $secondary;
+                    }
+
+                    td:nth-child(2) {
+                        text-align: right;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

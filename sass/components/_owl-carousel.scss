@@ -1,0 +1,30 @@
+.owl-categories {
+    .item-categories {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #f0f0f0;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 18px;
+
+        @include media-breakpoint-up(md) {
+            width: 150px;
+            height: 150px;
+        }
+
+        .img-item {
+            width: 60px;
+            margin-bottom: 12px;
+
+            @include media-breakpoint-up(md) {
+                width: 80px;
+            }
+        }
+
+        .text-item {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+}

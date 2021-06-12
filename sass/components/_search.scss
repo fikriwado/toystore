@@ -1,0 +1,28 @@
+.toystore-search {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 30px;
+    }
+
+    .group-input-btn {
+        .form-control {
+            color: $dark;
+        }
+
+        .btn-search {
+            border-radius: 0 6px 6px 0;
+            border: 1px solid $grey;
+        }
+
+        .form-control,
+        .btn-search {
+            background-color: #f3f3f3;
+        }
+
+        .form-control::placeholder,
+        .btn-search {
+            color: #878787;
+        }
+    }
+}

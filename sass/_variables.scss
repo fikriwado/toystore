@@ -1,0 +1,16 @@
+$primary: #ff5b00;
+$success: #25d681;
+$dark: #383845;
+$secondary: #73737b;
+$grey: #eaeaea;
+$brown: #361604;
+
+$theme-colors: (
+    "primary": $primary,
+    "dark": $dark,
+    "grey": $grey,
+    "success": $success,
+    "secondary": $secondary,
+);
+
+$theme-colors: map-remove($theme-colors, "danger", "warning", "info", "light");

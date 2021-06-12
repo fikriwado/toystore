@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Toystore | Detail - Cute teddy bear</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-toystore" data-aos="fade-down">
+        <div class="container-lg">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/logo.svg" alt="logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">Promo</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link cart-menu" href="./cart.html">
+                            <img src="./images/shopping-bag.svg" class="cart-icon" alt="cart">
+                            <span class="text-cart">Cart</span>
+                            <span class="d-inline-block text-center bg-success number-cart">5</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">
+                            <img src="./images/profile.png" class="rounded-circle mr-1" width="35" alt="profile">
+                            <span>Moch Fikri</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content page-product-detail">
+        <section class="toystore-breadcrumb">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Product Detail</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toystore-product-detail">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div id="gallery" class="toystore-gallery">
+                            <div class="row">
+                                <div class="col-lg-5 mb-4 mb-md-0" data-aos="zoom-in">
+                                    <transition name="fade-out-in" mode="out-in">
+                                        <img :src="photos[activePhoto].url" :key="photos[activePhoto].id"
+                                            class="w-100 show-img" alt="Image product">
+                                    </transition>
+
+                                    <div class="d-flex justify-content-between">
+                                        <div class="list-img" v-for="(photo, index) in photos" :key="photo.id"
+                                            data-aos="zoom-in" data-aos-delay="100">
+                                            <a href="#" @click="changeActive(index)">
+                                                <img :src="photo.thumb" class="w-100 thumb-img"
+                                                    :class="{active: index == activePhoto}" alt="product photos">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-7">
+                                    <h1 class="title" data-aos="fade-up">Cute teddy bear</h1>
+
+                                    <div class="information" data-aos="fade-up" data-aos-delay="100">
+                                        <span class="order">531 orders</span>
+                                        <span class="rating">
+                                            <span><i class="fas fa-star"></i></span> 5 <span>(498 Reviews)</span>
+                                        </span>
+                                    </div>
+
+                                    <h3 class="section-title price" data-aos="fade-up" data-aos-delay="200">Rp. 68.000,-
+                                    </h3>
+
+                                    <div class="description" data-aos="fade-up" data-aos-delay="300">
+                                        <p>Good quality teddy bear but affordable price. Can be for your beloved wife as
+                                            a cute and romantic gift.</p>
+                                        <p>
+                                            Spesification: <br>
+                                            1. Rasfur material (fluffy and soft) <br>
+                                            2. The doll is 45 cm high <br>
+                                            3. Washable
+                                        </p>
+                                    </div>
+
+                                    <div data-aos="fade-up" data-aos-delay="400">
+                                        <a href="./cart.html" class="btn btn-success">Add to cart</a>
+                                        <a href="#" class="btn btn-grey">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toystore-review" data-aos="fade-up" data-aos-delay="100">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="wrap-review bg-white my-shadow-card">
+                            <h3 class="title">Customer Review</h3>
+                            <div class="item-review">
+                                <div class="review-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-name">Moch Fikri Khoirurrizal on Jan 23, 2021</p>
+
+                                <p class="review-message">
+                                    I just got this teddy bear and it is very good quality, soft and fluffy too. The
+                                    delivery is quite fast and the seller's response is also very friendly and can be
+                                    discussed with. I recommend this shop to shop for toys for you or your child.
+                                </p>
+                            </div>
+
+                            <div class="item-review">
+                                <div class="review-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-grey"></i>
+                                </div>
+                                <p class="review-name">Rais Zainuri on Jan 23, 2021</p>
+
+                                <p class="review-message">
+                                    Wow my child likes this teddy bear. The material is very soft and soft, the price is
+                                    fairly cheap for a doll this good. Hopefully the doll will last.
+                                </p>
+                            </div>
+
+                            <div class="item-review">
+                                <div class="review-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-grey"></i>
+                                </div>
+                                <p class="review-name">Ikbal Ros Prayoga on Jan 23, 2021</p>
+
+                                <p class="review-message">
+                                    It didn't feel like it had arrived, the delivery was very fast even though the
+                                    distance was quite far from the sender to the house. Cool, good material, soft and
+                                    quite soft. have to try another item I recommend this shop.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toystore-related">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <h3 class="section-title" data-aos="fade-up">Related toys</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/4.jpg" class="card-img-top"
+                                                alt="cute elephant doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cute elephant doll</h5>
+                                            <p class="card-price">Rp. 65.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/17.jpg" class="card-img-top"
+                                                alt="lego fish cute">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lego fish cute</h5>
+                                            <p class="card-price">Rp. 55.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                                <a href="./product-detail.html" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/18.jpg" class="card-img-top" alt="i am groot">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">I am groot</h5>
+                                            <p class="card-price">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/19.jpg" class="card-img-top"
+                                                alt="lego little cat">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lego little cat</h5>
+                                            <p class="card-price">Rp. 75.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="toystore-footer footer-home">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="main-footer">
+                        <div class="row justify-content-center">
+                            <div class="col-11 col-md-3 mb-4 mb-md-0">
+                                <a href="#" class="footer-logo"><img src="./images/logo.svg" alt="logo"></a>
+                                <p class="sort-about">Toystore is an online toy store that has a lot of high quality
+                                    toys and good service.</p>
+                                <p class="copyright">
+                                    © 2020 <a href="https://fikriwado.com">Fikri Wado</a> |
+                                    <a href="resource.html" target="_blank">Unsplash</a> |
+                                    <a href="resource.html" target="_blank">Freepik</a> |
+                                    <a href="resource.html" target="_blank">Freepik On Flaticon</a>.
+                                </p>
+                            </div>
+
+                            <div class="col-11 col-md-2 offset-md-1 mb-4 mb-md-0">
+                                <h5 class="footer-link-title">Resources</h5>
+                                <nav class="nav flex-column footer-link">
+                                    <a class="nav-link" href="#">Help Center</a>
+                                    <a class="nav-link" href="#">Terms and Conditions</a>
+                                    <a class="nav-link" href="#">Privacy Policy Security</a>
+                                </nav>
+                            </div>
+
+                            <div class="col-11 col-md-2 mb-4 mb-md-0 ml-md-5">
+                                <h5 class="footer-link-title">About</h5>
+                                <nav class="nav flex-column footer-link">
+                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link" href="#">Job Vacancy</a>
+                                </nav>
+                            </div>
+
+                            <div class="col-11 col-md-3">
+                                <h5 class="footer-link-title">Get in touch</h5>
+                                <p>Have questions or feedback? we are open with you.</p>
+                                <div class="footer-sosmed">
+                                    <a href="https://www.facebook.com/fikriwado" class="sosmed-item"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/fikriwado_" class="sosmed-item"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/fikriwado/" class="sosmed-item"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
+        integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw=="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Toystore | Search</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-toystore" data-aos="fade-down">
+        <div class="container-lg">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/logo.svg" alt="logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">Promo</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link cart-menu" href="./cart.html">
+                            <img src="./images/shopping-bag.svg" class="cart-icon" alt="cart">
+                            <span class="text-cart">Cart</span>
+                            <span class="d-inline-block text-center bg-success number-cart">5</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">
+                            <img src="./images/profile.png" class="rounded-circle mr-1" width="35" alt="profile">
+                            <span>Moch Fikri</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content page-search">
+        <section class="toystore-search" data-aos="fade-up">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <form action="./search.html" method="GET">
+                            <div class="input-group group-input-btn">
+                                <input type="text" name="keyword" class="form-control border-right-0"
+                                    placeholder="Educational, Action, Bikes, Plane, etc"
+                                    aria-label="Educational, Action, Bikes, Plane, etc" aria-describedby="button-search"
+                                    value="action figure">
+                                <div class="input-group-append">
+                                    <button class="btn btn-search border-left-0" type="button" id="button-search">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toystore-search-filter" data-aos="fade-up" data-aos-delay="100">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="search-result">Search: <span class="text-primary">action figure</span></p>
+                            </div>
+                        </div>
+
+                        <div class="wrap-search-filter bg-white my-shadow-card">
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <form class="form-inline">
+                                        <div class="form-group mb-2">
+                                            <label for="sortFilter">Sort by :</label>
+                                            <select class="form-control ml-md-2" id="sortFilter">
+                                                <option>Best match</option>
+                                                <option>Ratting</option>
+                                                <option>Newest</option>
+                                                <option>Highest price</option>
+                                                <option>Lowest price</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-12 col-md-4 text-right d-none d-md-block">
+                                    <a href="#" class="btn btn-outline-primary px-4 ml-1">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary px-4 ml-1">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toystore-search-result">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100"
+                                data-aos-offset="80">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/1.jpg" class="card-img-top"
+                                                alt="stylish little doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Stylish little doll</h5>
+                                            <p class="card-price">Rp. 34.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200"
+                                data-aos-offset="80">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/2.jpg" class="card-img-top" alt="colorful piano">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Colorful piano</h5>
+                                            <p class="card-price">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300"
+                                data-aos-offset="80">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/3.jpg" class="card-img-top"
+                                                alt="bucket for sand castles">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bucket for sand castles</h5>
+                                            <p class="card-price">Rp. 45.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400"
+                                data-aos-offset="80">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/4.jpg" class="card-img-top"
+                                                alt="cute elephant doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cute elephant doll</h5>
+                                            <p class="card-price">Rp. 65.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/5.jpg" class="card-img-top"
+                                                alt="cute elephant doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Educational lego cars</h5>
+                                            <p class="card-price">Rp. 30.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/6.jpg" class="card-img-top"
+                                                alt="cute elephant doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Limited edition lego</h5>
+                                            <p class="card-price">Rp. 43.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/7.jpg" class="card-img-top"
+                                                alt="cute elephant doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Classic car toys</h5>
+                                            <p class="card-price">Rp. 72.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/8.jpg" class="card-img-top"
+                                                alt="cute elephant doll">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lego character</h5>
+                                            <p class="card-price">Rp. 58.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/13.jpg" class="card-img-top" alt="hulk avenger">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hulk avenger</h5>
+                                            <p class="card-price">Rp. 65.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/14.jpg" class="card-img-top"
+                                                alt="lego biking character">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lego biking character</h5>
+                                            <p class="card-price">Rp. 30.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/15.jpg" class="card-img-top" alt="evil minion">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Evil minion</h5>
+                                            <p class="card-price">Rp. 70.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/16.jpg" class="card-img-top" alt="gundam toys">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Gundam toys</h5>
+                                            <p class="card-price">Rp. 102.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/17.jpg" class="card-img-top"
+                                                alt="lego fish cute">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lego fish cute</h5>
+                                            <p class="card-price">Rp. 55.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/18.jpg" class="card-img-top" alt="i am groot">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">I am groot</h5>
+                                            <p class="card-price">Rp. 50.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/19.jpg" class="card-img-top"
+                                                alt="lego little cat">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lego little cat</h5>
+                                            <p class="card-price">Rp. 75.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/20.jpg" class="card-img-top" alt="education box">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Education box</h5>
+                                            <p class="card-price">Rp. 125.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/21.jpg" class="card-img-top"
+                                                alt="cute little racer">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cute little racer</h5>
+                                            <p class="card-price">Rp. 25.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/22.jpg" class="card-img-top"
+                                                alt="beach truck toys">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Beach truck toys</h5>
+                                            <p class="card-price">Rp. 60.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/23.jpg" class="card-img-top"
+                                                alt="street racing car">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Street racing car</h5>
+                                            <p class="card-price">Rp. 80.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="card card-product">
+                                        <div class="wrap-img-top">
+                                            <img src="./images/product/24.jpg" class="card-img-top"
+                                                alt="orange lego edition">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Orange lego edition</h5>
+                                            <p class="card-price">Rp. 100.000,-</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toystore-pagination" data-aos="fade-down">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="toystore-footer">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="main-footer">
+                        <div class="row justify-content-center">
+                            <div class="col-11 col-md-3 mb-4 mb-md-0">
+                                <a href="#" class="footer-logo"><img src="./images/logo.svg" alt="logo"></a>
+                                <p class="sort-about">Toystore is an online toy store that has a lot of high quality
+                                    toys and good service.</p>
+                                <p class="copyright">
+                                    © 2020 <a href="https://fikriwado.com">Fikri Wado</a> |
+                                    <a href="resource.html" target="_blank">Unsplash</a> |
+                                    <a href="resource.html" target="_blank">Freepik</a> |
+                                    <a href="resource.html" target="_blank">Freepik On Flaticon</a>.
+                                </p>
+                            </div>
+
+                            <div class="col-11 col-md-2 offset-md-1 mb-4 mb-md-0">
+                                <h5 class="footer-link-title">Resources</h5>
+                                <nav class="nav flex-column footer-link">
+                                    <a class="nav-link" href="#">Help Center</a>
+                                    <a class="nav-link" href="#">Terms and Conditions</a>
+                                    <a class="nav-link" href="#">Privacy Policy Security</a>
+                                </nav>
+                            </div>
+
+                            <div class="col-11 col-md-2 mb-4 mb-md-0 ml-md-5">
+                                <h5 class="footer-link-title">About</h5>
+                                <nav class="nav flex-column footer-link">
+                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link" href="#">Job Vacancy</a>
+                                </nav>
+                            </div>
+
+                            <div class="col-11 col-md-3">
+                                <h5 class="footer-link-title">Get in touch</h5>
+                                <p>Have questions or feedback? we are open with you.</p>
+                                <div class="footer-sosmed">
+                                    <a href="https://www.facebook.com/fikriwado" class="sosmed-item"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/fikriwado_" class="sosmed-item"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/fikriwado/" class="sosmed-item"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
+        integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw=="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

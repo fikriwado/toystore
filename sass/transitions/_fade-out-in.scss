@@ -1,0 +1,13 @@
+.fade-out-in-enter-active {
+    transition: all 0.2s ease;
+}
+
+.fade-out-in-leave-active {
+    transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.fade-out-in-enter,
+.fade-out-in-leave-to {
+    transform: translateY(10px);
+    opacity: 0.5;
+}

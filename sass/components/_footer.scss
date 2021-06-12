@@ -1,0 +1,74 @@
+.toystore-footer {
+    margin-top: 100px;
+    color: $secondary;
+
+    .main-footer {
+        padding: 40px 0;
+        border-top: 1px solid $grey;
+
+        // Identity website
+        .footer-logo {
+            display: inline-block;
+
+            img {
+                @include media-breakpoint-down(md) {
+                    height: 40px;
+                }
+            }
+        }
+
+        .copyright {
+            line-height: 21px;
+            @include font-size(13px);
+
+            a {
+                color: $secondary;
+            }
+        }
+
+        .footer-logo,
+        .sort-about {
+            margin-bottom: 16px;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 24px;
+            }
+        }
+
+        // Menus
+        .footer-link-title {
+            color: $dark;
+            margin-bottom: 16px;
+            @include font-size(18px);
+        }
+
+        .footer-link {
+            .nav-link {
+                color: $secondary;
+                padding-left: 0;
+                padding: 6px 0;
+            }
+        }
+
+        // Social Media
+        .footer-sosmed {
+            margin-top: 20px;
+
+            .sosmed-item {
+                color: $dark;
+                @include font-size(28px);
+                margin-right: 18px;
+            }
+        }
+
+        // Extends
+        p,
+        .footer-link-title {
+            line-height: 26px;
+
+            @include media-breakpoint-up(md) {
+                line-height: 30px;
+            }
+        }
+    }
+}
