@@ -1,13 +1,5 @@
 .navbar-toystore {
     background-color: #fbf6c9;
-    padding: 12px;
-
-    .container-lg {
-        @include media-breakpoint-down(lg) {
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-    }
 
     @include media-breakpoint-up(md) {
         padding: 14px;
