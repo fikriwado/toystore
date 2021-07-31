@@ -7984,6 +7984,16 @@ body {
   margin-top: 50px;
 }
 
+.page-checkout .toystore-product-list .wrap-address .customer-name {
+  color: #ff5b00;
+  font-weight: 500;
+}
+.page-checkout .toystore-product-list .wrap-address .customer-address {
+  margin-bottom: 8px;
+}
+.page-checkout .toystore-product-list .wrap-address .call-change-address {
+  font-size: 0.75rem;
+}
 .page-checkout .toystore-product-list .table th:nth-child(1),
 .page-checkout .toystore-product-list .table td:nth-child(1) {
   width: 59%;

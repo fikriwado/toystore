@@ -1,5 +1,20 @@
 .page-checkout {
     .toystore-product-list {
+        .wrap-address {
+            .customer-name {
+                color: $primary;
+                font-weight: 500;
+            }
+            
+            .customer-address {
+                margin-bottom: 8px;
+            }
+
+            .call-change-address {
+                @include font-size(12px);
+            }
+        }
+
         .table {
             th:nth-child(1),
             td:nth-child(1) {
