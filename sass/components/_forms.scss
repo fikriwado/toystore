@@ -1,0 +1,21 @@
+.form-control {
+    border-radius: 6px;
+    border: 1px solid $grey;
+    @include reset-shadow();
+    @include font-size(14px);
+
+    &:focus,
+    &.focus {
+        border-color: $grey;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.125rem;
+}
+
+.input-group.group-input-btn {
+    .form-control {
+        padding: 24px 28px;
+    }
+}

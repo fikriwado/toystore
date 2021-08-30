@@ -1,0 +1,24 @@
+.btn-grey {
+    @include button-variant(#f0f1f2, transparent);
+    color: #b0aeae;
+}
+
+.btn-qty {
+    @include button-variant($white, $grey);
+    color: $secondary;
+}
+.btn-danger {
+    @include button-variant(#ff7272, transparent);
+    color: $white;
+}
+
+.btn {
+    padding: 8px 28px;
+    border-radius: 6px;
+    @include reset-shadow();
+    @include font-size(14px);
+
+    &.btn-success {
+        color: $white;
+    }
+}

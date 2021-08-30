@@ -1,0 +1,30 @@
+.page-search {
+    .toystore-search-filter {
+        margin-bottom: 30px;
+
+        .search-result {
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .wrap-search-filter {
+            padding: 8px 14px;
+
+            @include media-breakpoint-up(md) {
+                padding: 16px 28px;
+            }
+
+            .form-inline {
+                label {
+                    font-weight: 500;
+                }
+
+                .form-control {
+                    width: 200px;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
