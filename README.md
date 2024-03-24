@@ -1,5 +1,5 @@
 ## ToyStore
-Toy Store is an online store website front-end template, more specifically a toy store. Check at [toystore.fikriwado.com](https://toystore.fikriwado.com)
+Toy Store is an online store website front-end template, more specifically a toy store. Check at [toystore-official.vercel.app](https://toystore-official.vercel.app/)
 
 You can use this template for free by not removing the copyright on the footer.
 
